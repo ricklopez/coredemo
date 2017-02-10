@@ -9,6 +9,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "coredemo.model", "coredemo.
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "coredemo.contracts", "coredemo.contracts\coredemo.contracts.xproj", "{8E4CFD46-A66C-499E-92E4-B8BD7898742B}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "coredemo.dal", "coredemo.dal\coredemo.dal.xproj", "{7B29CD10-CE9F-4B28-8281-8A39354A4473}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{8E4CFD46-A66C-499E-92E4-B8BD7898742B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E4CFD46-A66C-499E-92E4-B8BD7898742B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E4CFD46-A66C-499E-92E4-B8BD7898742B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B29CD10-CE9F-4B28-8281-8A39354A4473}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B29CD10-CE9F-4B28-8281-8A39354A4473}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B29CD10-CE9F-4B28-8281-8A39354A4473}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B29CD10-CE9F-4B28-8281-8A39354A4473}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
