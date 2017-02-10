@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace coredemo.contracts
+namespace coredemo.services
 {
     public class Class1
     {

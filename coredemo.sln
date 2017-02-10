@@ -11,6 +11,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "coredemo.contracts", "cored
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "coredemo.dal", "coredemo.dal\coredemo.dal.xproj", "{7B29CD10-CE9F-4B28-8281-8A39354A4473}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "coredemo.services", "coredemo.services\coredemo.services.xproj", "{3801D911-EC6A-4049-87E8-2E61EFBC8113}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{7B29CD10-CE9F-4B28-8281-8A39354A4473}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B29CD10-CE9F-4B28-8281-8A39354A4473}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B29CD10-CE9F-4B28-8281-8A39354A4473}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3801D911-EC6A-4049-87E8-2E61EFBC8113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3801D911-EC6A-4049-87E8-2E61EFBC8113}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3801D911-EC6A-4049-87E8-2E61EFBC8113}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3801D911-EC6A-4049-87E8-2E61EFBC8113}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

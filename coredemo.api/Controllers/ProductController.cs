@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using coredemo.dal.Repositories;
 using coredemo.model;
+using coredemo.model.ViewModels;
+using Microsoft.Extensions.Options;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -15,9 +17,9 @@ namespace coredemo.api.Controllers
     {
         private readonly ProductRepository productRepository;
 
-        public ProductController()
+        public ProductController(IOptions<DbConfig> options)
         {
-            productRepository = new ProductRepository();
+            productRepository = new ProductRepository(options);
         }
         // GET: api/values
         [HttpGet]

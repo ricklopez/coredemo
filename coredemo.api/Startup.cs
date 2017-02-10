@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using coredemo.model.ViewModels;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -28,6 +29,7 @@ namespace coredemo.api
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
+            services.Configure<DbConfig>(Configuration.GetSection("DbConfig"));
             services.AddMvc();
             services.AddSwaggerGen();
         }

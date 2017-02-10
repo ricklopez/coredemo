@@ -4,17 +4,21 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
+using coredemo.contracts.Repositories;
 using coredemo.model;
+using coredemo.model.ViewModels;
 using Dapper;
+using Microsoft.Extensions.Options;
 
 namespace coredemo.dal.Repositories
 {
-    public class ProductRepository
+    public class ProductRepository : IBaseRepository<Product>
     {
         private readonly string _connectionString;
-        public ProductRepository()
+
+        public ProductRepository(IOptions<DbConfig> dbConfig )
         {
-            _connectionString = @"Server=(localdb)\v11.0;Database=CoreDemo;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            _connectionString = dbConfig.Value.ConnectionString;
         }
 
         public IDbConnection Connection
