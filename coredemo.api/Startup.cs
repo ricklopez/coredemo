@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using coredemo.contracts.Repositories;
+using coredemo.dal.Repositories;
+using coredemo.model;
 using coredemo.model.ViewModels;
+using coredemo.services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -32,6 +36,8 @@ namespace coredemo.api
             services.Configure<DbConfig>(Configuration.GetSection("DbConfig"));
             services.AddMvc();
             services.AddSwaggerGen();
+            services.AddScoped<IBaseRepository<Product>, ProductRepository>();
+            services.AddScoped<ProductsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using coredemo.dal.Repositories;
 using coredemo.model;
 using coredemo.model.ViewModels;
+using coredemo.services;
 using Microsoft.Extensions.Options;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
@@ -15,24 +16,24 @@ namespace coredemo.api.Controllers
     [Route("api/[controller]")]
     public class ProductController : Controller
     {
-        private readonly ProductRepository productRepository;
+        private readonly ProductsService _productService;
 
-        public ProductController(IOptions<DbConfig> options)
+        public ProductController(ProductsService productsService)
         {
-            productRepository = new ProductRepository(options);
+            _productService = productsService;
         }
         // GET: api/values
         [HttpGet]
         public IEnumerable<Product> Get()
         {
-            return productRepository.GetAll();
+            return _productService.GetAllProducts();
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
         public Product Get(int id)
         {
-            return productRepository.GetByID(id);
+            return _productService.GetByProductById(id);
         }
 
         // POST api/values
@@ -40,7 +41,7 @@ namespace coredemo.api.Controllers
         public void Post([FromBody]Product prod)
         {
             if (ModelState.IsValid)
-                productRepository.Add(prod);
+                _productService.CreateNewProduct(prod);
         }
 
         // PUT api/values/5
@@ -49,14 +50,14 @@ namespace coredemo.api.Controllers
         {
             prod.ProductId = id;
             if (ModelState.IsValid)
-                productRepository.Update(prod);
+                _productService.UpdateProduct(id, prod);
         }
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            productRepository.Delete(id);
+            _productService.DeleteProduct(id);
         }
     }
 }
